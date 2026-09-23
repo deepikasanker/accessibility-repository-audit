@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive mobile-first dashboard demo">
+  <title>AccessBoard - Responsive Design Demo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="AccessBoard home">AccessBoard</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#projects">Projects</a>
+      <a href="#activity">Activity</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="dashboard">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Responsive design system</p>
+        <h1>Project dashboard</h1>
+        <p class="hero-copy">A mobile-first interface using CSS custom properties, Grid, Flexbox and fluid spacing.</p>
+        <a class="button" href="#projects">View projects</a>
+      </div>
+      <div class="hero-panel" aria-label="Project progress">
+        <span class="hero-panel-label">Overall progress</span>
+        <strong>74%</strong>
+        <div class="progress" role="progressbar" aria-label="Overall progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="74">
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current work</p>
+          <h2 id="projects-title">Projects</h2>
+        </div>
+        <a href="#contact">Add project</a>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-icon" aria-hidden="true">01</div>
+          <div class="card-body">
+            <h3>Campus Portal</h3>
+            <p>Accessible student services dashboard.</p>
+            <div class="meta"><span>Web</span><span>72%</span></div>
+            <div class="progress"><span style="width:72%"></span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-icon" aria-hidden="true">02</div>
+          <div class="card-body">
+            <h3>Help Desk</h3>
+            <p>Service request and support workflow.</p>
+            <div class="meta"><span>Full Stack</span><span>54%</span></div>
+            <div class="progress"><span style="width:54%"></span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="card-icon" aria-hidden="true">03</div>
+          <div class="card-body">
+            <h3>Reports</h3>
+            <p>Responsive analytics and reporting tools.</p>
+            <div class="meta"><span>Analytics</span><span>88%</span></div>
+            <div class="progress"><span style="width:88%"></span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="activity" class="section" aria-labelledby="activity-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Latest updates</p>
+          <h2 id="activity-title">Activity</h2>
+        </div>
+      </div>
+      <div class="activity-list">
+        <article class="activity-item">
+          <span class="activity-dot" aria-hidden="true"></span>
+          <div><h3>Accessibility review completed</h3><p>Semantic structure and keyboard focus were checked.</p></div>
+          <time datetime="2026-09-23">Today</time>
+        </article>
+        <article class="activity-item">
+          <span class="activity-dot" aria-hidden="true"></span>
+          <div><h3>Responsive layout updated</h3><p>Mobile, tablet and desktop breakpoints were added.</p></div>
+          <time datetime="2026-09-22">Yesterday</time>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Need help?</p>
+        <h2 id="contact-title">Contact the team</h2>
+        <p>Use the form to send a project-related question.</p>
+      </div>
+      <form action="#" method="post">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button class="button" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 AccessBoard. Responsive design demo.</p>
+  </footer>
+  <script src="js/menu.js"></script>
+</body>
+</html>
