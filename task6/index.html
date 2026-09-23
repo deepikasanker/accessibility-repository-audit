@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusTasker | Student Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="shell header-inner">
+      <div>
+        <p class="eyebrow">Task 6 · Production Capstone</p>
+        <h1>CampusTasker</h1>
+        <p>Plan assignments, track deadlines and keep your semester organized.</p>
+      </div>
+      <div class="user-badge" aria-label="Signed in user">DS · Student</div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Dashboard</p>
+        <h2>Your assignment workspace</h2>
+        <p id="apiStatus" class="muted" role="status">Checking API...</p>
+      </div>
+      <div class="stats" aria-label="Task summary">
+        <div><strong id="totalCount">0</strong><span>Total</span></div>
+        <div><strong id="pendingCount">0</strong><span>Pending</span></div>
+        <div><strong id="doneCount">0</strong><span>Completed</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <h2>Add assignment</h2>
+          <p class="muted">Create a task and store it through the REST API.</p>
+        </div>
+      </div>
+
+      <form id="taskForm" class="task-form">
+        <label>Assignment title
+          <input id="title" name="title" required maxlength="100" placeholder="e.g. JavaScript mini project">
+        </label>
+
+        <label>Subject
+          <input id="subject" name="subject" required maxlength="60" placeholder="e.g. Web Development">
+        </label>
+
+        <label>Due date
+          <input id="dueDate" name="dueDate" type="date" required>
+        </label>
+
+        <label>Priority
+          <select id="priority" name="priority">
+            <option>Low</option>
+            <option selected>Medium</option>
+            <option>High</option>
+          </select>
+        </label>
+
+        <button class="primary" type="submit">Add assignment</button>
+      </form>
+      <p id="formMessage" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <h2>Assignments</h2>
+          <p class="muted">Use the controls to filter and manage your tasks.</p>
+        </div>
+        <select id="filter" aria-label="Filter assignments">
+          <option value="all">All tasks</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+          <option value="high">High priority</option>
+        </select>
+      </div>
+
+      <div id="taskList" class="task-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>CampusTasker · Full-stack CRUD capstone</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
